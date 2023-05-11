@@ -1,0 +1,12 @@
+.form-group {
+    position: relative;
+}
+.form-group input {
+    padding: 16px 24px;
+}
+
+.form-group svg {
+    position: absolute;
+    left: 4px;
+    top: 16px;
+}

@@ -1,0 +1,15 @@
+aside ul li {
+    list-style: none;
+    position: relative;
+    text-align: start;
+    cursor: pointer;
+}
+aside ul li::before {
+    position: absolute;
+    background-color: blue;
+    width: 16px;
+    height: 16px;
+    content: '';
+    left: -24px;
+    top: 4px;
+}

@@ -1,0 +1,17 @@
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid blue;
+}
+.header-nav, .nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 20px;
+}
+.header-wrapper img {
+    max-width: 200px;
+}
