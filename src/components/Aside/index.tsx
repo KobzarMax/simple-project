@@ -1,16 +1,18 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLeftLong, faRightLong } from '@fortawesome/free-solid-svg-icons';
 
 export const Aside = () => {
 
-    const [show, setShow] = useState('Hide');
+    const [show, setShow] = useState(<FontAwesomeIcon icon={faLeftLong} />);
     const [asideView, setAsideView] = useState(true);
 
     const toggleShow = () => {
-        if (show === 'Hide') {
-            setShow('Show');
+        if (asideView === true) {
+            setShow(<FontAwesomeIcon icon={faRightLong} />);
             setAsideView(false);
         } else {
-            setShow('Hide');
+            setShow(<FontAwesomeIcon icon={faLeftLong} />);
             setAsideView(true);
         }
     }
@@ -25,13 +27,11 @@ export const Aside = () => {
                     </h2>
                 }
             </div>
-            {asideView && 
                 <ul>
-                    <li>Speed</li>
-                    <li>Capacity</li>
-                    <li>Valume</li>
+                    <li><span className='aside-icon'></span> {asideView && 'Speed'}</li>
+                    <li><span className='aside-icon'></span> {asideView && 'Capacity'}</li>
+                    <li><span className='aside-icon'></span> {asideView && 'Valume'}</li>
                 </ul>
-            }
         </aside>
     )
 }

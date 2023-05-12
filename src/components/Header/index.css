@@ -17,8 +17,26 @@
     max-width: 120px;
 }
 
+button {
+    color: black;
+}
 
+@media (prefers-color-scheme: light) {
+    button:hover {
+        background-color: #ffffff;
+    }
+}
 
-.active-link {
-
+.active {
+    position: relative;
+}
+.active::after {
+    position: absolute; 
+    width: 100%;
+    background-color: blue;
+    height: 3px;
+    border-radius: 6px;
+    content: '';
+    bottom: -16px;
+    left: 0;
 }

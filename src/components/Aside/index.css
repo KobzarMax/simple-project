@@ -1,19 +1,40 @@
 aside ul li {
     list-style: none;
-    position: relative;
     text-align: start;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-aside ul li::before {
-    position: absolute;
+aside ul li .aside-icon {
     background-color: blue;
     width: 16px;
     height: 16px;
-    content: '';
-    left: -24px;
-    top: 4px;
+    display: block;
+}
+.aside-title {
+    margin-bottom: 0;
+}
+
+.aside-wrapper ul {
+    padding-inline-start: 0;
 }
 
 aside {
-    padding-left: 20px;
+    box-shadow: -6px 18px 19px 0px rgba(66, 68, 90, 1);
+}
+.aside-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.aside-head span {
+    width: 100%;
+    text-align: right;
+    margin-right: 20px;
 }

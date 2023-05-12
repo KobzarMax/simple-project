@@ -3,15 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react"
 
 
-export const Select = ({ options, defaultValue }) => {
+interface SelectProps {
+    options: string[];
+    defaultValue: string;
+}
 
-    const [value, setValue] = useState(defaultValue);
+export const Select = ({ options, defaultValue } : SelectProps) => {
+
+    const [value, setValue] = useState(defaultValue || null);
     const [dropdown, setDropdown] = useState(false);
 
-    const chooseValue = (index) => {
-        setValue(index.target.innerText);
-        toggleDropdown();
-    }
+  const chooseValue = (event: React.MouseEvent<HTMLParagraphElement>) => {
+    const selectedValue = event.currentTarget.textContent;
+    setValue(selectedValue);
+    toggleDropdown();
+  };
 
     const toggleDropdown = () => {
         setDropdown(!dropdown);
