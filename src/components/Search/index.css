@@ -3,6 +3,8 @@
 }
 .form-group input {
     padding: 16px 24px;
+    border-radius: 12px;
+    outline: none;
 }
 
 .form-group svg {

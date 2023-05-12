@@ -1,0 +1,21 @@
+.select-wrapper {
+    min-width: 100px;
+    border-radius: 12px;
+    border: 1px solid #202020;
+    position: relative;
+}
+.select-field {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.dropdown-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #202020;
+}

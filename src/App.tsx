@@ -52,9 +52,9 @@ function App() {
               <Search />
             </div>
             <div className="selects">
-              <Select />
-              <Select />
-              <Select />
+              <Select defaultValue={'Order by'} options={['Name', 'Date', 'Default']} />
+              <Select defaultValue={'Platform'} options={['Twitch', 'WSDA', 'Trello']} />
+              <Select defaultValue={'Customer'} options={['Customer', 'Employee', 'Partner']} />
             </div>
             <div className="cards">
               {cards.map((card, index) => (

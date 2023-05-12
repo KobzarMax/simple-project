@@ -1,13 +1,14 @@
 @import url('./components/Header/index.css');
 @import url('./components/Aside/index.css');
 @import url('./components/Search/index.css');
+@import url('./components/Select/index.css');
 
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   width: 100%;
+  overflow: hidden;
 }
 
 p {
@@ -86,8 +87,15 @@ p {
   gap: 20px;
 }
 .card {
-  max-width: 200px;
-  max-height: 200px;
   border: 1px solid black;
   margin-top: 2rem;
+  transition: 0.3s all;
+  border-radius: 12px;
+}
+.card:hover {
+  box-shadow: 3px 7px 14px 0px rgba(66, 68, 90, 1);
+}
+.card p:first-child {
+  font-weight: 700;
+  font-size: 2rem;
 }

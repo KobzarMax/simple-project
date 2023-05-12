@@ -13,3 +13,7 @@ aside ul li::before {
     left: -24px;
     top: 4px;
 }
+
+aside {
+    padding-left: 20px;
+}
